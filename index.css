@@ -1,0 +1,862 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+    width: 190px;
+    margin-top: 15px;
+    margin-left: 100px;
+}
+
+ul li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* header section  */
+
+header{
+    background: white;
+   /* background: linear-gradient(90deg, rgb(246, 245, 249) 0%, rgb(251, 251, 253) 35%, rgb(236, 239, 239) 100%);
+    background: linear-gradient(to right, #f2f1f1, #ccc8c8, #efecec); */
+    color: black;
+}
+
+.layout {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navbar {
+    /*padding: 30px 0;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;*/
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+} 
+
+.navbar .btn {
+    margin-right: 100px;
+}
+ 
+span{
+    color:rgb(3, 108, 143);
+}
+
+.ul {
+    display: flex;
+    font-weight: 600;
+}
+ul li a{
+    margin: 0 10px;
+    padding: 0 5px;
+    color: rgb(0, 0, 10);
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li a::before{
+    content: '';
+    width: 0;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    background-color: black;
+    transition: 0.6s ease;
+}
+
+ul li a:hover::before{
+    width: 100%;
+}
+
+    
+
+
+/* button  */
+
+.btn{
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    color: rgb(8, 8, 8);
+    outline: none;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0 5px;
+    font-weight: 500;
+    width: 140px;
+    margin-top: 20px;
+}
+
+.btn:hover{
+    background-color: rgb(3, 108, 143);;
+    color: white;
+    border: 2px solid rgb(18, 18, 19);
+}
+
+/* header content  */
+
+.content1{
+    height: 90vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.content1 .left {
+    flex: 2;
+}
+
+.content1 .right img{
+    width: 105%;
+    position: relative;
+    z-index: 999;
+    cursor: pointer;
+    transition: 0.3s ease;
+    flex: 3;
+    height: 600px;
+    margin-left: 15px;
+}
+
+.content1 .right img:hover{
+    filter: drop-shadow(16px 5px 20px rgb(47, 47, 46));
+}
+
+.h4 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(53, 49, 49, 0.93);
+}
+
+.h2 {
+ margin-top: 10px;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ font-weight: 700;
+ color: rgba(16, 2, 2, 0.93);
+}
+
+.p{
+    margin-top: 10px;
+    color: rgba(53, 49, 49, 0.93);
+}
+
+
+
+/* For screens up to 768px wide (typical mobile screens) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .navcontent {
+        margin-top: 20px;
+    }
+
+    ul.ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul li {
+        margin: 10px 0;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .content1 {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        text-align: center;
+        margin: 0;
+    }
+
+    .right img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* For screens between 769px and 992px wide (tablets) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .navbar {
+        flex-direction: row;
+        text-align: left;
+        padding: 30px 0;
+    }
+
+    .navcontent {
+        margin-top: 0;
+    }
+
+    ul.ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    ul li {
+        margin: 0 20px;
+    }
+
+    .btn {
+        width: 140px;
+    }
+
+    .content1 {
+        flex-direction: row;
+    }
+
+    .left,
+    .right {
+        text-align: left;
+        margin: 0;
+    }
+
+    .right img {
+        width: 105%;
+        height: 600px;
+    }
+}
+
+
+/* About Me */
+
+.About {
+    display: flex;
+    margin: 20px 0;
+}
+
+.top-header h1 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.top-header hr {
+    width: 80%;
+    border: 2px solid rgb(3, 108, 143);
+    margin-top: 10px;
+}
+
+.About1{
+    position: relative;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 30px 70px;
+    padding-inline: 20px;
+    width: 100%;
+    background: white;
+    box-shadow: 2px 9px 11px 3px rgba(8, 8, 8, 0.1);
+    border-radius: 20px;
+}
+.About1 p{
+    text-align: center;
+    font-size: 15px;
+    color: #777;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap:50px;
+}
+
+.col {
+    display: flex;
+    width:50%;
+}
+
+/* ----- ABOUT / SKILLS BOX ----- */
+.skills1{
+    margin: 10px;
+}
+.skills-heading{
+    margin-bottom: 30px;
+}
+.skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.skills-content span{
+    font-size: 14px;
+    background: rgb(3, 108, 143);
+    color: white;
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+
+
+.interest-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.interest-content span{
+    font-size: 14px;
+    background: rgb(3, 108, 143);
+    color: white;
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+
+/* For screens up to 768px wide (typical mobile screens) */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .About1 {
+        padding: 20px;
+    }
+
+    .skills {
+        padding: 20px;
+    }
+
+    .interests {
+        margin-top: 30px;
+    }
+
+    .skills-content span,
+    .interest-content span {
+        margin-right: 10px;
+    }
+}
+
+/* For screens between 769px and 992px wide (tablets) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .skills1 {
+        flex-direction: column;
+    }
+
+    .skills-content span {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .interest-content span {
+        margin-right: 10px;
+    }
+}
+  
+/* CSS for About Me Section Transitions */
+.section#aboutme {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Add a class for an active section */
+.section#aboutme.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add transitions to various elements within the "About Me" section */
+.About1, .skills, .interests {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Add a class for active elements */
+.About1.active, .skills.active, .interests.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/*project*/
+
+.pre {
+    color: #777;
+}
+
+.project1 pre {
+    color: black;
+}
+
+.project1{
+    position: relative;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 10px 40px;
+    padding-inline: 7px;
+    width: 100%;
+    height: 350px;
+    background: rgb(126, 160, 175);
+    box-shadow: 1px 8px 10px 2px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    letter-spacing: 0;
+    line-height: 30px;
+}
+
+/* For screens up to 768px wide (typical mobile screens) */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .project1 {
+        padding: 20px;
+    }
+
+    .project1 h3 {
+        font-size: 24px;
+    }
+}
+
+/* For screens between 769px and 992px wide (tablets) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .project1 h3 {
+        font-size: 26px;
+    }
+
+    .project1 pre {
+        font-size: 14px;
+    }
+}
+
+
+/*contact*/
+
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 0; /* Adjust padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h1 {
+    font-size: 36px;
+    font-weight: 500;
+    color: black;
+}
+
+.contact .content p {
+    font-weight: 300;
+    color: black;
+}
+
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container .contact-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contact-info .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.container .contact-info .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: rgb(162, 160, 160);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contact-info .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: black;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.container .contact-info .box .text h3 {
+    font-weight: 500;
+    color: rgb(3, 108, 143); /* Corrected color value */
+}
+
+.contactform {
+    width: 40%;
+    padding: 40px;
+    background:  rgb(162, 160, 160);
+    display: flex;
+    flex-direction: column; /* Use flexbox for the contact form */
+    align-items: center; /* Center the form horizontally */
+}
+
+.contactform h2 {
+    font-size: 30px; /* Corrected font size */
+    color: #080808;
+    font-weight: 500;
+}
+
+.contactform .inputbox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactform .inputbox input,
+.contactform .inputbox textarea {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none; /* Removed hyphen from border property */
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactform .inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #080808;
+}
+
+.contactform .inputbox input:focus ~ span,
+.contactform .inputbox input:valid ~ span,
+.contactform .inputbox textarea:focus ~ span,
+.contactform .inputbox textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactform .inputbox input[type="submit"] {
+    width: 100%;
+    background: #00bcd4;
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.content hr {
+    width: 100%;
+    border: 2px solid rgb(3, 108, 143);
+    margin-top: 10px;
+}
+
+
+/* For screens up to 768px wide (typical mobile screens) */
+@media (max-width: 768px) {
+    .contactform {
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        width: 100%;
+    }
+
+    .box {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+/* For screens between 769px and 992px wide (tablets) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contact-info {
+        width: 45%;
+    }
+
+    .contactform {
+        width: 45%;
+    }
+}
+
+/* Add a transition for smooth section transitions */
+section {
+    opacity: 0;
+    transform: translateY(30px); /* Initial state: hidden below */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Add a class for an active section */
+section.active {
+    opacity: 1;
+    transform: translateY(0); /* Final state: visible with a slide-in effect */
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .left,
+    .right {
+        width: 100%;
+        text-align: center;
+    }
+    .right img {
+        width: 80%; 
+    }
+}
+
+
+@media only screen and (min-width: 769px) {
+    .layout {
+        display: flex;
+        justify-content: space-between;
+    }
+    .left,
+    .right {
+        width: 48%; 
+    }
+}
+
+/* General styles */
+.section {
+    padding: 20px;
+    /* Add any other general styles */
+}
+
+/* Flexbox layout for rows and columns */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Styles for columns */
+.col {
+    width: calc(50% - 20px); /* Adjust width and spacing */
+    margin-bottom: 20px; /* Spacing between columns */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .col {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+/* General styles */
+.project {
+    padding: 20px;
+    /* Add any other general styles */
+}
+
+/* Flexbox layout for rows and columns */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Styles for columns */
+.col {
+    width: calc(50% - 20px); /* Adjust width and spacing */
+    margin-bottom: 20px; /* Spacing between columns */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .col {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+/* General styles */
+.contact {
+    padding: 20px;
+    /* Add any other general styles */
+}
+
+/* Flexbox layout for container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Styles for contact info and form columns */
+.contact-info,
+.contactform {
+    width: calc(50% - 20px); /* Adjust width and spacing */
+    margin-bottom: 20px; /* Spacing between columns */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stacked layout on smaller screens */
+    }
+
+    .contact-info,
+    .contactform {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+/* For screens up to 768px wide (typical mobile screens) */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        padding: 15px 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .logo {
+        width: 140px; /* Adjust the logo size for smaller screens */
+        margin: 0 auto; /* Center the logo */
+        display: block; /* Make the logo a block element */
+    }
+
+    .navbar .btn {
+        margin-right: 0; /* Remove unnecessary margin for the button */
+        margin-top: 10px; /* Adjust button margin for better spacing */
+    }
+
+    ul.ul {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    ul li {
+        margin: 10px 0;
+    }
+
+    ul li a {
+        padding: 5px 0;
+        font-size: 16px;
+    }
+
+    /* Header content */
+    .content1 {
+        flex-direction: column-reverse; /* Rearrange content for smaller screens */
+        align-items: center;
+    }
+
+    .content1 .left,
+    .content1 .right {
+        width: 100%; /* Adjust content width for mobile screens */
+        text-align: center;
+        margin-bottom: 30px; /* Add space between sections */
+    }
+
+    .content1 .right img {
+        width: 80%; /* Adjust image size for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .h2 {
+        font-size: 24px; /* Adjust heading size for mobile screens */
+        margin-top: 20px; /* Adjust spacing */
+    }
+
+    .p {
+        font-size: 14px; /* Adjust paragraph font size */
+    }
+
+    /* About Me section */
+    .About1,
+    .skills,
+    .interests {
+        padding: 20px; /* Adjust padding for better spacing */
+    }
+
+    /* Project section */
+    .project1,
+    .project1 pre,
+    .project1 h3 {
+        font-size: 18px; /* Adjust project text size for mobile screens */
+    }
+
+    /* Contact section */
+    .container {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contactform {
+        width: 100%; /* Full width for contact info and form */
+    }
+
+    .contactform {
+        padding: 20px; /* Adjust padding for better spacing */
+    }
+}
